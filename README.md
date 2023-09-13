@@ -1,6 +1,6 @@
 # CS710S Windows C# Bluetooth Demo App for Winform on DOTNET
 
-The demo app is intended for connecting the CS710S handheld sled reader to a Windows-based PC through Bluetooth for the following operations:
+The demo app is intended for connecting the CS710S handheld sled reader to a Windows-based PC through Bluetooth BLE 5.X for the following operations:
 
 - Scan device(s) in the environment
 - Device connection
