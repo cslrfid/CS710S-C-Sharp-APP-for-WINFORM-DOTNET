@@ -15,6 +15,7 @@ namespace CS108DesktopDemo
     public partial class FormMain : Form
     {
         HighLevelInterface _reader = new HighLevelInterface();
+        private System.Collections.Generic.SortedDictionary<string, int> TagInfoListSpeedup = new SortedDictionary<string, int>();
 
 
         public FormMain()
@@ -63,8 +64,17 @@ namespace CS108DesktopDemo
 
         private void button3_Click(object sender, EventArgs e)
         {
+            try
+            {
+                _reader.rfid.SetPowerLevel(int.Parse(textBox_Power.Text));
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show ("Power value error: set power to 300 now");
+                _reader.rfid.SetPowerLevel(300);
+            }
+
             _reader.rfid.OnAsyncCallback += new EventHandler<CSLibrary.Events.OnAsyncCallbackEventArgs>(TagInventoryEvent);
-            _reader.rfid.SetPowerLevel(150);
             _reader.rfid.Options.TagRanging.flags = 0;
             _reader.rfid.StartOperation(CSLibrary.Constants.Operation.TAG_RANGING);
         }
@@ -77,12 +87,26 @@ namespace CS108DesktopDemo
             }
         }
 
+
         void TagInventoryEvent(object sender, CSLibrary.Events.OnAsyncCallbackEventArgs e)
         {
             if (e.type != CSLibrary.Constants.CallbackType.TAG_RANGING)
                 return;
 
-            textBox2.Text += e.info.epc + Environment.NewLine;
+            BeginInvoke(new Action(() =>
+            {
+                try
+                {
+                    var EPC = e.info.epc.ToString();
+
+                    TagInfoListSpeedup.Add(EPC, TagInfoListSpeedup.Count);
+                    textBox2.Text += EPC + Environment.NewLine;
+                }
+                catch (Exception ex)
+                {
+                }
+            }));
+
         }
 
         private void button4_Click(object sender, EventArgs e)
@@ -101,6 +125,7 @@ namespace CS108DesktopDemo
         private void button6_Click(object sender, EventArgs e)
         {
             textBox2.Text = "";
+            TagInfoListSpeedup.Clear();
         }
     }
 }

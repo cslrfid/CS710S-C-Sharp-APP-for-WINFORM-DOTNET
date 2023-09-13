@@ -38,6 +38,8 @@
             this.columnHeaderDeviceName = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.button5 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.textBox_Power = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // button1
@@ -62,7 +64,7 @@
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(12, 253);
+            this.button3.Location = new System.Drawing.Point(12, 278);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(116, 49);
             this.button3.TabIndex = 3;
@@ -72,7 +74,7 @@
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(144, 253);
+            this.textBox2.Location = new System.Drawing.Point(144, 278);
             this.textBox2.Multiline = true;
             this.textBox2.Name = "textBox2";
             this.textBox2.ScrollBars = System.Windows.Forms.ScrollBars.Both;
@@ -89,7 +91,7 @@
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(12, 319);
+            this.button4.Location = new System.Drawing.Point(12, 344);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(116, 49);
             this.button4.TabIndex = 6;
@@ -101,6 +103,7 @@
             // 
             this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeaderDeviceName});
+            this.listView1.HideSelection = false;
             this.listView1.Location = new System.Drawing.Point(144, 12);
             this.listView1.Name = "listView1";
             this.listView1.Size = new System.Drawing.Size(290, 78);
@@ -125,7 +128,7 @@
             // 
             // button6
             // 
-            this.button6.Location = new System.Drawing.Point(12, 387);
+            this.button6.Location = new System.Drawing.Point(12, 412);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(116, 49);
             this.button6.TabIndex = 9;
@@ -133,11 +136,30 @@
             this.button6.UseVisualStyleBackColor = true;
             this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(55, 258);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(73, 13);
+            this.label1.TabIndex = 10;
+            this.label1.Text = "Power (0-300)";
+            // 
+            // textBox_Power
+            // 
+            this.textBox_Power.Location = new System.Drawing.Point(144, 255);
+            this.textBox_Power.Name = "textBox_Power";
+            this.textBox_Power.Size = new System.Drawing.Size(73, 20);
+            this.textBox_Power.TabIndex = 11;
+            this.textBox_Power.Text = "300";
+            // 
             // FormMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(448, 448);
+            this.ClientSize = new System.Drawing.Size(448, 517);
+            this.Controls.Add(this.textBox_Power);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.button6);
             this.Controls.Add(this.button5);
             this.Controls.Add(this.listView1);
@@ -166,6 +188,8 @@
         private System.Windows.Forms.ColumnHeader columnHeaderDeviceName;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox textBox_Power;
     }
 }
 

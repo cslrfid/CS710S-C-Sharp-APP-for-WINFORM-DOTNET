@@ -7,7 +7,7 @@
     <ProjectGuid>{38139270-F40E-43CA-91A5-C8CC4C4F4D7D}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <RootNamespace>CS108DesktopDemo</RootNamespace>
-    <AssemblyName>CS108DesktopDemo</AssemblyName>
+    <AssemblyName>CS710SDesktopDemo</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
