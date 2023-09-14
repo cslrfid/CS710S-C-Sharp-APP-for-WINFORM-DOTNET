@@ -170,11 +170,10 @@ namespace CSLibrary
         public async Task<bool> DisconnectAsync()
         {
             if (Status != READERSTATE.IDLE)
-                return false;
+                _handlerRFIDReader.StopOperation();
 
             BARCODEPowerOff();
             WhenBLEFinish(ClearConnection);
-
             return true;
         }
 
