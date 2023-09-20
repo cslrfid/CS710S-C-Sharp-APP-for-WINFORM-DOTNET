@@ -40,6 +40,8 @@
             this.button6 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.textBox_Power = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.textBox_DuplicateWindow = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // button1
@@ -64,7 +66,7 @@
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(12, 278);
+            this.button3.Location = new System.Drawing.Point(12, 304);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(116, 49);
             this.button3.TabIndex = 3;
@@ -74,7 +76,7 @@
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(144, 278);
+            this.textBox2.Location = new System.Drawing.Point(157, 304);
             this.textBox2.Multiline = true;
             this.textBox2.Name = "textBox2";
             this.textBox2.ScrollBars = System.Windows.Forms.ScrollBars.Both;
@@ -83,7 +85,7 @@
             // 
             // textBox3
             // 
-            this.textBox3.Location = new System.Drawing.Point(144, 134);
+            this.textBox3.Location = new System.Drawing.Point(157, 134);
             this.textBox3.Multiline = true;
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(290, 104);
@@ -91,7 +93,7 @@
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(12, 344);
+            this.button4.Location = new System.Drawing.Point(12, 370);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(116, 49);
             this.button4.TabIndex = 6;
@@ -104,7 +106,7 @@
             this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeaderDeviceName});
             this.listView1.HideSelection = false;
-            this.listView1.Location = new System.Drawing.Point(144, 12);
+            this.listView1.Location = new System.Drawing.Point(157, 12);
             this.listView1.Name = "listView1";
             this.listView1.Size = new System.Drawing.Size(290, 78);
             this.listView1.TabIndex = 7;
@@ -128,7 +130,7 @@
             // 
             // button6
             // 
-            this.button6.Location = new System.Drawing.Point(12, 412);
+            this.button6.Location = new System.Drawing.Point(12, 438);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(116, 49);
             this.button6.TabIndex = 9;
@@ -147,17 +149,36 @@
             // 
             // textBox_Power
             // 
-            this.textBox_Power.Location = new System.Drawing.Point(144, 255);
+            this.textBox_Power.Location = new System.Drawing.Point(157, 255);
             this.textBox_Power.Name = "textBox_Power";
             this.textBox_Power.Size = new System.Drawing.Size(73, 20);
             this.textBox_Power.TabIndex = 11;
             this.textBox_Power.Text = "300";
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(9, 284);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(135, 13);
+            this.label2.TabIndex = 12;
+            this.label2.Text = "Duplicate window (second)";
+            // 
+            // textBox_DuplicateWindow
+            // 
+            this.textBox_DuplicateWindow.Location = new System.Drawing.Point(157, 281);
+            this.textBox_DuplicateWindow.Name = "textBox_DuplicateWindow";
+            this.textBox_DuplicateWindow.Size = new System.Drawing.Size(73, 20);
+            this.textBox_DuplicateWindow.TabIndex = 13;
+            this.textBox_DuplicateWindow.Text = "5";
+            // 
             // FormMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(448, 517);
+            this.ClientSize = new System.Drawing.Size(501, 517);
+            this.Controls.Add(this.textBox_DuplicateWindow);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.textBox_Power);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button6);
@@ -193,6 +214,8 @@
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox textBox_Power;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox textBox_DuplicateWindow;
     }
 }
 
