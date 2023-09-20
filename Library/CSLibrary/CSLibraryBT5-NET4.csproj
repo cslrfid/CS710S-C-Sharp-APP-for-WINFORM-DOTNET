@@ -40,15 +40,15 @@
     <Reference Include="System.Xml" />
     <Reference Include="wclBluetoothFramework, Version=7.17.0.0, Culture=neutral, PublicKeyToken=31ded9088a20b7e8, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\CS710SDemo\Library\CSLibrary\Source\HAL\btframework\wclBluetoothFramework.dll</HintPath>
+      <HintPath>Source\HAL\btframework\wclBluetoothFramework.dll</HintPath>
     </Reference>
     <Reference Include="wclCommon, Version=7.11.5.0, Culture=neutral, PublicKeyToken=82c86b86abd59210, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\CS710SDemo\Library\CSLibrary\Source\HAL\btframework\wclCommon.dll</HintPath>
+      <HintPath>Source\HAL\btframework\wclCommon.dll</HintPath>
     </Reference>
     <Reference Include="wclCommunication, Version=7.8.1.0, Culture=neutral, PublicKeyToken=959749996648afb6, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\CS710SDemo\Library\CSLibrary\Source\HAL\btframework\wclCommunication.dll</HintPath>
+      <HintPath>Source\HAL\btframework\wclCommunication.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>

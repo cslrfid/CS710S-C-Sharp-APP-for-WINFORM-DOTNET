@@ -68,6 +68,7 @@ namespace CS108DesktopDemo
             try
             {
                 _reader.rfid.SetPowerLevel(int.Parse(textBox_Power.Text));
+                _reader.rfid.SetDuplicateEliminationRollingWindow(uint.Parse(textBox_DuplicateWindow.Text));
             }
             catch (Exception ex)
             {
@@ -94,20 +95,26 @@ namespace CS108DesktopDemo
             if (e.type != CSLibrary.Constants.CallbackType.TAG_RANGING)
                 return;
 
-            BeginInvoke(new Action(() =>
+            try
             {
-                try
-                {
-                    var EPC = e.info.epc.ToString();
+                var EPC = e.info.epc.ToString();
 
-                    TagInfoListSpeedup.Add(EPC, TagInfoListSpeedup.Count);
-                    textBox2.Text += EPC + Environment.NewLine;
-                }
-                catch (Exception ex)
-                {
-                }
-            }));
+                TagInfoListSpeedup.Add(EPC, TagInfoListSpeedup.Count);
 
+                BeginInvoke(new Action(() =>
+                {
+                    try
+                    {
+                        textBox2.Text += EPC + Environment.NewLine;
+                    }
+                    catch (Exception ex)
+                    {
+                    }
+                }));
+            }
+            catch (Exception ex)
+            {
+            }
         }
 
         private void button4_Click(object sender, EventArgs e)
