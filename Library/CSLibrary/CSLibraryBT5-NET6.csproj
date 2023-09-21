@@ -1,0 +1,60 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Properties\**" />
+    <Compile Remove="Source\HAL\Acr.ble\**" />
+    <Compile Remove="Source\HAL\btframework\Lib\netcoreapp3.1\**" />
+    <Compile Remove="Source\HAL\btframework\Lib\netframework\**" />
+    <Compile Remove="Source\HAL\btframework\Lib\netstandard2.0\**" />
+    <Compile Remove="Source\HAL\MvvmCross.Plugin.BLE\**" />
+    <Compile Remove="Source\HAL\UWP\**" />
+    <EmbeddedResource Remove="Properties\**" />
+    <EmbeddedResource Remove="Source\HAL\Acr.ble\**" />
+    <EmbeddedResource Remove="Source\HAL\btframework\Lib\netcoreapp3.1\**" />
+    <EmbeddedResource Remove="Source\HAL\btframework\Lib\netframework\**" />
+    <EmbeddedResource Remove="Source\HAL\btframework\Lib\netstandard2.0\**" />
+    <EmbeddedResource Remove="Source\HAL\MvvmCross.Plugin.BLE\**" />
+    <EmbeddedResource Remove="Source\HAL\UWP\**" />
+    <None Remove="Properties\**" />
+    <None Remove="Source\HAL\Acr.ble\**" />
+    <None Remove="Source\HAL\btframework\Lib\netcoreapp3.1\**" />
+    <None Remove="Source\HAL\btframework\Lib\netframework\**" />
+    <None Remove="Source\HAL\btframework\Lib\netstandard2.0\**" />
+    <None Remove="Source\HAL\MvvmCross.Plugin.BLE\**" />
+    <None Remove="Source\HAL\UWP\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Remove="Source\RFIDReader\CSLUnifiedAPI\Basic_API\CS710S\ClassRFID.Public.QTCommandParms.cs" />
+    <Compile Remove="Source\SystemInformation\ClassdBm2dBV.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="Source\HAL\btframework\wclBluetoothFramework.dll" />
+    <None Remove="Source\HAL\btframework\wclCommon.dll" />
+    <None Remove="Source\HAL\btframework\wclCommunication.dll" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Source\HAL\btframework\Lib\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="wclBluetoothFramework">
+      <HintPath>Source\HAL\btframework\wclBluetoothFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="wclCommon">
+      <HintPath>Source\HAL\btframework\wclCommon.dll</HintPath>
+    </Reference>
+    <Reference Include="wclCommunication">
+      <HintPath>Source\HAL\btframework\wclCommunication.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+</Project>

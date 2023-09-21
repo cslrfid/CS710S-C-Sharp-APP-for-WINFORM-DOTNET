@@ -1,0 +1,75 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v6.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v6.0": {
+      "CS710SDesktopDemo-NET6/1.0.0": {
+        "dependencies": {
+          "CSLibraryBT5-NET6": "1.0.0"
+        },
+        "runtime": {
+          "CS710SDesktopDemo-NET6.dll": {}
+        }
+      },
+      "CSLibraryBT5-NET6/1.0.0": {
+        "runtime": {
+          "CSLibraryBT5-NET6.dll": {}
+        }
+      },
+      "wclBluetoothFramework/7.3.12.0": {
+        "runtime": {
+          "wclBluetoothFramework.dll": {
+            "assemblyVersion": "7.3.12.0",
+            "fileVersion": "7.3.12.0"
+          }
+        }
+      },
+      "wclCommunication/7.2.12.0": {
+        "runtime": {
+          "wclCommunication.dll": {
+            "assemblyVersion": "7.2.12.0",
+            "fileVersion": "7.2.12.0"
+          }
+        }
+      },
+      "wclCommon/7.4.14.0": {
+        "runtime": {
+          "wclCommon.dll": {
+            "assemblyVersion": "7.4.14.0",
+            "fileVersion": "7.4.14.0"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "CS710SDesktopDemo-NET6/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "CSLibraryBT5-NET6/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "wclBluetoothFramework/7.3.12.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "wclCommunication/7.2.12.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "wclCommon/7.4.14.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
